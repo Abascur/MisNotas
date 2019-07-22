@@ -1,5 +1,8 @@
 package com.example.abascur.misnotas.models;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 /**
  * Created by Antonio Bascur Q. on 20/7/2019.
  */
@@ -11,23 +14,23 @@ public class asignatura {
     private String tipo;
     private int creditos;
     private double promedio;
-    private double meta;
+    private double notaEximicion;
 
-    public asignatura(String id, String nombre, String tipo, int creditos, double promedio, double meta) {
+    public asignatura(String id, String nombre, String tipo, int creditos, double promedio, double notaEximicion) {
         this.id = id;
         this.nombre = nombre;
         this.tipo = tipo;
         this.creditos = creditos;
         this.promedio = promedio;
-        this.meta=meta;
+        this.notaEximicion = notaEximicion;
     }
 
-    public double getMeta() {
-        return meta;
+    public double getNotaEximicion() {
+        return notaEximicion;
     }
 
-    public void setMeta(double meta) {
-        this.meta = meta;
+    public void setNotaEximicion(double notaEximicion) {
+        this.notaEximicion = notaEximicion;
     }
 
     public String getId() {
@@ -68,5 +71,24 @@ public class asignatura {
 
     public void setPromedio(double promedio) {
         this.promedio = promedio;
+    }
+
+    public JSONObject getJson(){
+        JSONObject json= new JSONObject();
+        try {
+            json.put ("id",getId());
+            json.put ("nombre",getNombre());
+            json.put ("tipo",getTipo());
+            json.put ("creditos",getCreditos());
+            json.put ("promedio",getPromedio());
+            json.put ("notaEximicion",getNotaEximicion());
+
+
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return json;
+
     }
 }

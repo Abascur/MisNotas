@@ -42,7 +42,7 @@ public class asigAdapters extends RecyclerView.Adapter<asigAdapters.ViewHolder>{
 
         viewHolder.textNombreAsig.setText(asig.getNombre());
         viewHolder.textPromAsig.setText("Prom. Actual : " + asig.getPromedio());
-        viewHolder.textPromMetaAsig.setText("Meta Actual : " + asig.getMeta());
+        viewHolder.textEximAsig.setText("Nota Eximición : " + asig.getNotaEximicion());
 
 
         viewHolder.cv.setOnClickListener(new View.OnClickListener() {
@@ -61,7 +61,7 @@ public class asigAdapters extends RecyclerView.Adapter<asigAdapters.ViewHolder>{
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView textNombreAsig;
         TextView textPromAsig;
-        TextView textPromMetaAsig;
+        TextView textEximAsig;
         CardView cv;
 
         public ViewHolder(View itemView)
@@ -70,7 +70,7 @@ public class asigAdapters extends RecyclerView.Adapter<asigAdapters.ViewHolder>{
 
             textNombreAsig = (TextView)itemView.findViewById(R.id.textNombreAsig);
             textPromAsig = (TextView)itemView.findViewById(R.id.textPromAsig);
-            textPromMetaAsig = (TextView)itemView.findViewById(R.id.textPromMetaAsig);
+            textEximAsig = (TextView)itemView.findViewById(R.id.textEximAsig);
 
             cv = (CardView)itemView.findViewById(R.id.cardviewItemAsig);
         }

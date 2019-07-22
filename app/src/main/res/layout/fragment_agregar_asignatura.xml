@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dialogs.AgregarAsignaturaFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agregar nueva Asignatura"
+            android:textAlignment="center"
+            android:textColor="#242F6D"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/textID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Identificador"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:id="@+id/editID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="IN1097"
+            android:layout_marginBottom="5dp"
+            />
+        <TextView
+            android:id="@+id/textNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:id="@+id/editNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Calculo I"
+            android:layout_marginBottom="5dp"
+            />
+
+        <TextView
+            android:id="@+id/textTipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tipo"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+
+        <Spinner
+            android:id="@+id/spinnerTipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/tipoAsignaturas"
+            android:layout_marginBottom="5dp"
+            />
+        <TextView
+            android:id="@+id/textCreditos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Creditos"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:id="@+id/editCreditos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:hint="3"
+            android:layout_marginBottom="5dp"
+            />
+        <TextView
+            android:id="@+id/textNotaExim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nota Eximición"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:id="@+id/editNotaExim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:hint="3"
+            android:layout_marginBottom="5dp"
+            />
+
+        <Button
+            android:id="@+id/buttonGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:elevation="10dp"
+            android:background="@color/colorPrimaryDark"/>
+
+    </LinearLayout>
+
+
+</FrameLayout>
